@@ -58,61 +58,55 @@ body {
     background-color: #f5f5f5;
     width: 85%;
     padding: 20px;
-    position:relative;
-}
-
-.header {
-    position: relative;
-    background-color: #80004b;
-    color: white;
-    padding: 20px 40px;
-    border-radius: 0 20px 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left:-3%; /* Salir de la barra lateral */
-    width: calc(25%);
+    height: 100vh; /* Asegúrate de que ocupe toda la altura */
 }
 
-.register-button-container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.register-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.table-container {
-    margin-top: 40px;
-}
-
-table {
-    width: 100%;
+.grades-table {
+    width: 70%;
+    max-width: 800px;
     border-collapse: collapse;
 }
 
-table, th, td {
+.grades-table th, .grades-table td {
     border: 1px solid black;
-}
-
-th, td {
     padding: 10px;
     text-align: center;
 }
 
-th {
+.grades-table th {
     background-color: #f2f2f2;
 }
 
-td .icon-button img {
-    width: 20px;
-    cursor: pointer;
+.grades-table th a {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+.grades-table th a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustes de ancho de columna */
+.grades-table th:nth-child(1),
+.grades-table td:nth-child(1) {
+    width: 5%; /* Columna de Grupo más pequeña */
+}
+
+.grades-table th:nth-child(2),
+.grades-table td:nth-child(2) {
+    width: 10%; /* Columna de Curso más grande */
+}
+
+.grades-table th:nth-child(3),
+.grades-table td:nth-child(3),
+.grades-table th:nth-child(4),
+.grades-table td:nth-child(4),
+.grades-table th:nth-child(5),
+.grades-table td:nth-child(5),
+.grades-table th:nth-child(6),
+.grades-table td:nth-child(6) {
+    width: 3%; /* Ajustar el resto de columnas según necesidad */
 }

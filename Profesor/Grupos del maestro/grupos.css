@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la pantalla */
 }
 
 .container {
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    flex-grow: 1; /* Permite que el contenedor crezca con el contenido */
 }
 
 .sidebar {
@@ -18,6 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0px 0;
+    flex-grow: 1; /* Permite que el sidebar crezca con el contenido */
 }
 
 .sidebar .logo {

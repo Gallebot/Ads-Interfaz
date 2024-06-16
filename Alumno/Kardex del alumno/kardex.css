@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la pantalla */
 }
 
 .container {
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    flex-grow: 1; /* Permite que el contenedor crezca con el contenido */
 }
 
 .sidebar {
@@ -18,7 +18,9 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 0px 0;
+    flex-grow: 1; /* Permite que el sidebar crezca con el contenido */
 }
+
 
 .sidebar .logo {
     display: flex;
@@ -57,20 +59,32 @@ body {
     width: 85%;
     padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* Asegúrate de que ocupe toda la altura */
+}
+
+.semester {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.semester h2 {
+    background-color: #80004b;
+    color: white;
+    padding: 3px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .grades-table {
-    width: 70%;
-    max-width: 800px;
+    width: 100%;
     border-collapse: collapse;
 }
 
 .grades-table th, .grades-table td {
     border: 1px solid black;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -85,26 +99,4 @@ body {
 
 .grades-table th a:hover {
     text-decoration: underline;
-}
-
-/* Ajustes de ancho de columna */
-.grades-table th:nth-child(1),
-.grades-table td:nth-child(1) {
-    width: 5%; /* Columna de Grupo más pequeña */
-}
-
-.grades-table th:nth-child(2),
-.grades-table td:nth-child(2) {
-    width: 10%; /* Columna de Curso más grande */
-}
-
-.grades-table th:nth-child(3),
-.grades-table td:nth-child(3),
-.grades-table th:nth-child(4),
-.grades-table td:nth-child(4),
-.grades-table th:nth-child(5),
-.grades-table td:nth-child(5),
-.grades-table th:nth-child(6),
-.grades-table td:nth-child(6) {
-    width: 3%; /* Ajustar el resto de columnas según necesidad */
 }
